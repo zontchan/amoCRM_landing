@@ -1,0 +1,25 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  padding-top: 46px;
+}
+
+.header-logo__label{
+  font-family: $font-accent;
+  font-size: 10px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+@include mediaMobile{
+  .header-logo{
+    display: none;
+  }
+  .header{
+    background-color: $dark-bg;
+    margin-top: 0;
+    justify-content: center;
+    padding: 20px 0;
+  }
+}

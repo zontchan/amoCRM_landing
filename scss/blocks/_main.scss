@@ -1,0 +1,145 @@
+.main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-top: 93px;
+  margin-bottom: 67px;
+  width: 100%;
+}
+.main-header{
+  //width: 362px;
+}
+.main-header__title{
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+.main-header__subtitle{
+  font-family: $font-accent;
+  font-size: 18px;
+  font-weight: 400;
+}
+.main-header__accent{
+  font-weight: 900;
+
+  background-color: #E4E5EA;
+  background-image: linear-gradient(135deg, #FCB045 35%, #FF3F78);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.offers-block{
+  text-align: right;
+  padding-top: 10px;
+}
+.offers-title{
+  margin-bottom: 40px;
+
+  font-size: 18px;
+  font-weight: 500;
+
+}
+
+.offers__list-desktop{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px ;
+  margin-bottom: 60px;
+}
+.offers__list-mobile{
+  display: none;
+}
+
+.offers__item-title{
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+}
+.offers-title__accent{
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #E4E5EA;
+  background-image: linear-gradient(90deg, #FCB045 20%, #FD1D1D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.offers__item-subtitle{
+  font-family: $font-accent;
+}
+
+.offers__button{
+  max-width: 262px;
+  background-color: $color-interact;
+  font-weight: 500 ;
+
+  padding: 20px 35px;
+  cursor: pointer;
+}
+
+@include mediaMobile{
+  .main{
+    backdrop-filter: blur(4px);
+    background:
+            radial-gradient(circle at 100%,
+                    rgba(131,58,180,0.2),
+                    rgba(0,0,255,0) 80%),
+            radial-gradient(circle at 0% 100%,
+                    rgba(150,26,26,0.2),
+                    rgba(255,0,0,0) 80%),
+            radial-gradient(circle at 0% 0%,
+                    rgba(255,246,233,0.1),
+                    rgba(0,0,0,255) 70%),
+            $dark-bg;
+    flex-direction: column;
+    gap: 48px;
+    padding: 40px 15px;
+    margin: 0;
+  }
+  .main-header__title{
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+  .offers-block{
+    padding-top: 0;
+    text-align: left;
+  }
+  .offers-title{
+    margin-bottom: 20px;
+  }
+  .offers-title__accent{
+    text-transform: none;
+    background-image: linear-gradient(90deg, #FCB045 70%, #FD1D1D);
+  }
+  .offers__list-desktop{
+    display: none;
+  }
+  .offers__list-mobile{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+
+    font-size: 13px;
+    font-family: $font-accent;
+    text-transform: uppercase;
+    li{
+      display: flex;
+    }
+    li:before{
+        content: "";
+        width: 10px;
+      height: 1px;
+      display: inline-block;
+      align-self: center;
+
+      background-color: #E4E5EA;
+      background-image: linear-gradient(90deg, #FCB045 30%, #FD1D1D);
+      margin-right: 5px;
+
+    }
+  }
+  .offers__button{
+    display: none;
+  }
+}

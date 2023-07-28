@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Montserrat:wght@300;400&display=swap');
+@import "./mixins";
+
+/*
+font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+body{
+  font-family: $font-main;
+  background:
+          radial-gradient(circle at 50% 0,
+                  rgba(131,58,180,0.1),
+                  rgba(0,0,255,0) 50%),
+          radial-gradient(circle at 0% 40%,
+                  rgba(150,26,26,0.2),
+                  rgba(255,0,0,0) 30%),
+                  $dark-bg;
+
+
+  color: $color-main;
+  font-size: 16px;
+
+  @include mediaMobile {
+    background:$dark-bg;
+  }
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include mediaMobile {
+    padding: 0;
+  }
+}
+
+a{
+  color: $color-main;
+}
+

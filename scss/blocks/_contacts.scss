@@ -1,0 +1,21 @@
+.contacts-list{
+  display: flex;
+  flex-direction: row;
+  padding-top: 3px;
+}
+
+.contacts-list__item{
+  margin-right: 30px;
+  &:last-child{
+    margin-right: 0;
+  }
+  &:first-child{
+    margin-right: 47px;
+  }
+}
+
+@media (max-width: 1055px){
+ .header-contacts{
+   display: none;
+ }
+}
